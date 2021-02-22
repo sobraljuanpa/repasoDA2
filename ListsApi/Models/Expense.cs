@@ -4,9 +4,9 @@ namespace ListsApi.Models
 {
     public class Expense
     {
-        public long id { get; set; }
-        public string name { get; set; }
-        public int amoung { get; set; }
-        public DateTime date { get; set; }
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public int Amount { get; set; }
+        public DateTime Date { get; set; }
     }
 }
