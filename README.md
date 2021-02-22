@@ -1,5 +1,12 @@
 # repasoDA2
 
+## Comandos Docker API
+
+```
+docker build -t todoapi .
+docker run -it --rm -p 5001:80 --name todoapi todoapi
+```
+
 ## Ideas para adelante
 
 ### Diseño
