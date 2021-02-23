@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using ListsApi.Models;
 
 namespace ListsApi
 {
@@ -28,10 +30,7 @@ namespace ListsApi
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ListsApi", Version = "v1" });
-            });
+            services.AddDbContext<ListsContext>(opt => opt.UseSqlite("Data Source=todos.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
