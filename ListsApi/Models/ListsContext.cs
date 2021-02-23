@@ -4,7 +4,7 @@ namespace ListsApi.Models
 {
     public class ListsContext : DbContext
     {
-        public TodoContext(DbContextOptions<TodoContext> options) : base(options)
+        public ListsContext(DbContextOptions<TodoContext> options) : base(options)
         {
         }
 
